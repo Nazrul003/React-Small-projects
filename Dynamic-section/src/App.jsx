@@ -33,10 +33,10 @@ function App() {
     }
   return (
     <>
-    <div className='mx-auto shadow-black shadow-lg w-[400px] p-10 mt-20 rounded-lg'>
+    <div className='mx-auto shadow-black shadow-lg sm:min-w-[400px] p-10 mt-20 rounded-lg w-[300px]'>
       {section.dynamicSec.map((value,index)=>{
         return(
-          <div key={index} className='flex flex-col gap-3'>
+          <div key={index} className='flex flex-col gap-5'>
           <input type='text'
            className='bg-gray-100 p-1 rounded-md border-[1px]'
 
@@ -62,7 +62,7 @@ function App() {
           className='w-fit
 
           bg-slate-600
-         text-white text-[20px] p-2 rounded-md hover:bg-slate-700 active:bg-black mb-2'
+         text-white sm:text-[20px] text-[16px] px-4 py-1 rounded-md hover:bg-slate-700 active:bg-black mb-4'
           onClick={() => remove(index)}>Remove section</button>
           </div>
         )
@@ -70,7 +70,7 @@ function App() {
 
       <button
       className='text-center w-full bg-gray-800
-       text-white text-[20px] p-1 rounded-md hover:bg-gray-900 active:bg-black'
+       text-white md:text-[26px] text-[16px] p-1 rounded-md hover:bg-gray-900 active:bg-black'
        onClick={Add}>Addsection</button>
       </div>
     </>
